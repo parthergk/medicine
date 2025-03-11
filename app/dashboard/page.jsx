@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { AdminHeader } from "@/components/Admin-header"
-import { InventoryManagement } from "@/components/Inventory-management"
+import { InventoryTable } from "@/components/Inventory-management"
 import { StockChart } from "@/components/Stock-chart"
 import { TopMedicines } from "@/components/Top-medicines"
 
@@ -145,16 +145,16 @@ export default function AdminDashboard() {
                 <TabsTrigger value="reservations">Reservations</TabsTrigger>
               </TabsList>
               <TabsContent value="all" className="mt-4">
-                <InventoryManagement />
+                <InventoryTable />
               </TabsContent>
               <TabsContent value="low-stock" className="mt-4">
-                <InventoryManagement filter="low-stock" />
+                <InventoryTable filter="low-stock" />
               </TabsContent>
               <TabsContent value="out-of-stock" className="mt-4">
-                <InventoryManagement filter="out-of-stock" />
+                <InventoryTable filter="out-of-stock" />
               </TabsContent>
               <TabsContent value="reservations" className="mt-4">
-                <InventoryManagement filter="reservations" />
+                <InventoryTable filter="reservations" />
               </TabsContent>
             </Tabs>
           </CardContent>
